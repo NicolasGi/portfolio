@@ -1,0 +1,126 @@
+html {
+  scroll-behavior: smooth;
+}
+
+/*.title{
+  opacity: 0;
+  transform: translateY(2rem);
+  transition: transfrom 4s .25s cubic-bezier(0,1,.3,1),
+              opacity .3s .25s ease-in-out;
+  will-change: transform, opacity;
+}
+.title.is-visible{
+  opacity: 1;
+  transform: translateY(-5rem);
+}*/
+
+
+.about__content, .project__container {
+  opacity: 0;
+  transition: opacity .5s .25s ease-out;
+}
+
+.about__content, .project__container {
+  &.is-visible {
+    opacity: 1;
+  }
+}
+
+.contact__container {
+  transform: translateY(1em);
+
+}
+
+
+
+.title {
+  transform: translateY(.5em);
+}
+
+.txt {
+  transform: translateY(2em);
+}
+
+.btn {
+  transform: translateY(3em);
+}
+
+img, .project-desc__img {
+  transform: scale(0.8);
+}
+
+.is-visible {
+  .title, .txt, .btn, .contact__container, .projects-content, .project-desc__img {
+    transform: translateY(0);
+  }
+}
+
+.is-visible img {
+  transform: none;
+}
+
+.title, img, .txt, .btn, .contact__container, .projects-content, .project-desc__img {
+  transition: transform 3s .35s cubic-bezier(0, 1, .3, 1);
+  will-change: transform;
+}
+
+/*
+.about__img{
+  filter: grayscale(100%);
+  position: relative;
+  &:hover{
+    .hover{
+      opacity:0.4;
+    }
+    .hover-img{
+      transform:translate(var(--translate-x), var(--translate-y));
+    }
+  }
+}
+.portrait{
+
+  margin: 0 auto;
+  position: relative;
+  overflow: hidden;
+
+
+}
+
+.fill{
+  width:350px;
+  height: 350px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 5;
+}
+
+.z-10{
+  z-index: 10;
+}
+
+.hover{
+   transition:all 380ms cubic-bezier(.16,.01,.77,1);
+  opacity:0;
+  //padding: 0 30px 20px 0;
+}
+
+.hover-img{
+  transition:opacity,transform 320ms cubic-bezier(.16,.01,.77,1);
+
+  &:after{
+    content: '';
+    @extend .fill;
+    background-color: blue;
+    mix-blend-mode: color;   //overlay, darken
+  }
+}
+
+.cover-img{
+  background-position: top center;
+  background-repeat: no-repeat;
+  background-image: url('http://localhost/portfolio_wordpress/wp-content/themes/portefolio/assets/img/profile.png');
+}
+
+*/
+
